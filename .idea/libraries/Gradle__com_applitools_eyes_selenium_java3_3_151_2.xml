@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.applitools:eyes-selenium-java3:3.151.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.applitools/eyes-selenium-java3/3.151.2/bb8318ff8d8dc3ea01dfaa7d5d730630451b518b/eyes-selenium-java3-3.151.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.applitools/eyes-selenium-java3/3.151.2/83a6e277dd22b060ba4ff31da3ae9fd732c60719/eyes-selenium-java3-3.151.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
