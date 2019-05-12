@@ -7,9 +7,10 @@ public class CreateBoard extends  TestBase{
     @Test
     public void boardCreationTest() throws InterruptedException {
     
+        String boardName = "Test Board";
         app.clickOnPlusButtonOnHeader();
         app.selectCreationBoardFromDropDown();
-        app.fillBoardCreationForm("Test Board");
+        app.fillBoardCreationForm(boardName);
         app.submitBoardCreation();
     }
     

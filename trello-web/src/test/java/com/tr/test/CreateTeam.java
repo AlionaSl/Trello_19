@@ -9,15 +9,19 @@ public class CreateTeam extends TestBase {
     @Test
     public void teamCreationFromHeaderTest() throws InterruptedException {
         
+        String teamNameBefore = "Test Team Expected";
+        String teamDescreeption = "Team Description";
+        
         app.clickOnPlusButtonOnHeader();
         app.selectCreateTeamFromDropDown();
-        app.fillTeamCreationForm("Test Team Expected", "Team Description");
+        
+        app.fillTeamCreationForm(teamNameBefore, teamDescreeption);
         app.submitTeamCreation();
         
         //===================================
         String teamNameActual = app.getTeamName();
     
-        Assert.assertEquals(teamNameActual, "Test Team Expected");
+        Assert.assertEquals(teamNameActual, teamNameBefore);
         
     }
 }
