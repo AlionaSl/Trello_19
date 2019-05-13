@@ -1,6 +1,5 @@
 package com.tr.test;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -9,19 +8,19 @@ public class CreateTeam extends TestBase {
     @Test
     public void teamCreationFromHeaderTest() throws InterruptedException {
         
-        String teamNameBefore = "Test Team Expected";
-        String teamDescreeption = "Team Description";
+        String teamNameExpected = "Test Team Expected" + System.currentTimeMillis();
+        String teamDescreeption = "Team Description" + System.currentTimeMillis();
         
-        app.clickOnPlusButtonOnHeader();
-        app.selectCreateTeamFromDropDown();
+        app.getHeaderHelper().clickOnPlusButtonOnHeader();
+        app.getTeamHelper().selectCreateTeamFromDropDown();
         
-        app.fillTeamCreationForm(teamNameBefore, teamDescreeption);
-        app.submitTeamCreation();
+        app.getTeamHelper().fillTeamCreationForm(teamNameExpected, teamDescreeption);
+        app.getTeamHelper().submitTeamCreation();
         
         //===================================
-        String teamNameActual = app.getTeamName();
+        String teamNameActual = app.getTeamHelper().getTeamName();
     
-        Assert.assertEquals(teamNameActual, teamNameBefore);
+        Assert.assertEquals(teamNameActual, teamNameExpected);
         
     }
 }

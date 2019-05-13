@@ -2,21 +2,27 @@ package com.tr.test;
 
 import org.testng.annotations.Test;
 
-public class CreateBoard extends  TestBase{
+public class CreateBoard extends  TestBase {
     
     @Test
     public void boardCreationTest() throws InterruptedException {
     
-        String boardName = "Test Board";
-        app.clickOnPlusButtonOnHeader();
-        app.selectCreationBoardFromDropDown();
-        app.fillBoardCreationForm(boardName);
-        app.submitBoardCreation();
+        // int before = app.getBoardHelper().getBoardsCount();
+//        System.out.println(before);
+    
+        String nameBoardBefore = "Test Board" + System.currentTimeMillis();
+    
+        app.getHeaderHelper().clickOnPlusButtonOnHeader();
+        app.getBoardHelper().selectCreationBoardFromDropDown();
+        app.getBoardHelper().fillBoardCreationForm(nameBoardBefore);
+        app.getBoardHelper().submitBoardCreation();
+
+//        cllickOnHomePageIcon();
+    
     }
-    
-    @Test(enabled = false)
-    public void boardCreationNegativeTest(){
+        @Test(enabled = false)
+        public void boardCreationNegativeTest () {
+        
     
     }
-    
 }
