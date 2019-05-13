@@ -24,8 +24,17 @@ public class HeaderHelper extends HelperBase {
     }
     
  
-    public void clickOnHomeBittonOnHeader(){
-        click(By.cssSelector("[class='header-btn js-back-menu']"));
+//    public void clickOnHomeButtonOnHeader(){
+//        click(By.cssSelector("[class='header-btn js-back-menu']"));
+//    }
+    
+    public void clickOnHomeButtonOnHeader() {
+//        click(By.cssSelector(".icon-house"));
+        //[class='header-btn-icon icon-lg icon-house light']
+        //[class='header-btn js-back-menu']
+        //[aria-label="Back to Home"]
+
+        click(By.cssSelector("[aria-label='Back to Home']"));
     }
     
 }

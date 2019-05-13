@@ -34,7 +34,7 @@ public class ApplicationManager {
     }
     
     public void stop() {
-//        logOut();
+//        logOut(); // it doesn't work for CreateBoard !!!
         wd.quit();
     }
     
@@ -65,8 +65,12 @@ public class ApplicationManager {
     }
     
     private void logOut() {
-//        click(By.cssSelector("[aria-label='Open Member Menu']"));
-        click(By.cssSelector("[class='member']"));
+        click(By.cssSelector("[aria-label='Open Member Menu']"));
+        
+        // the alternative for the previous line:
+//        click(By.cssSelector("[class='member']"));
+//        click(By.xpath("//a[@class='header-btn header-avatar js-open-header-member-menu']"));
+        
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         click(By.cssSelector(".js-logout"));
     }

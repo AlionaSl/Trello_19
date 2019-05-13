@@ -25,4 +25,18 @@ public class BoardHelper extends HelperBase {
         click(By.cssSelector(".js-new-board"));
     }
     
+    public String getBoardName() {
+//        return wd.findElement(By.cssSelector("[class='js-board-editing-target board-header-btn-text']")).getText();
+//        String boardName = wd.findElement(By.cssSelector("[class='board-name-input js-board-name-input']")).getText();
+        String boardName = wd.findElement(By.cssSelector("[class='js-board-editing-target board-header-btn-text']")).getText();
+        wd.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
+        return boardName;
+    }
+    
+    public int getBoardsCount() {
+        wd.findElements(By.cssSelector("")).size();
+        return 0;
+    }
+    
+ 
 }
