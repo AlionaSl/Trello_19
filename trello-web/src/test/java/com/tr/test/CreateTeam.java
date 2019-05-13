@@ -19,7 +19,6 @@ public class CreateTeam extends TestBase {
         
         //===================================
         String teamNameActual = app.getTeamHelper().getTeamName();
-    
         Assert.assertEquals(teamNameActual, teamNameExpected);
         
     }
