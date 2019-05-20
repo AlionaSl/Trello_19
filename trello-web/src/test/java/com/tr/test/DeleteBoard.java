@@ -9,7 +9,7 @@
 //public class DeleteBoard extends TestBase {
 //
 //    WebDriver wd;
-//
+//  //span[@class="icon-lg icon-member"]/../../..//ul // !!!!!!!!!!!!!
 //    @Test
 //    public void deleteBoard (){
 //

@@ -22,7 +22,7 @@ public class CreateBoard extends  TestBase {
 //        Assert.assertEquals(nameBoardActual, nameBoardExpected);
 
         // return to home page
-        app.getHeaderHelper().clickOnHomeButtonOnHeader();
+        app.getHeaderHelper().clickOnHomeIconOnHeader();
         
 //        int boardsAfter = app.getBoardHelper().getBoardsCount();
 //        Assert.assertEquals(boardsAfter,boardsBefore+1);
