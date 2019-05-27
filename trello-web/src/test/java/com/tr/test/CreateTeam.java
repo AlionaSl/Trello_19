@@ -1,5 +1,6 @@
 package com.tr.test;
 
+import com.tr.model.Team;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,7 +15,7 @@ public class CreateTeam extends TestBase {
         app.getHeaderHelper().clickOnPlusButtonOnHeader();
         app.getTeamHelper().selectCreateTeamFromDropDown();
         
-        app.getTeamHelper().fillTeamCreationForm(teamNameExpected, teamDescreeption);
+        app.getTeamHelper().fillTeamCreationForm(new Team().withTeamName(teamNameExpected).withDesc(teamDescreeption));
         app.getTeamHelper().submitTeamCreation();
         
         //===================================

@@ -1,5 +1,6 @@
 package com.tr.manager;
 
+import com.tr.model.Team;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -16,8 +17,11 @@ public class TeamHelper extends HelperBase {
         click(By.cssSelector(".js-new-org"));
     }
     
-    public void fillTeamCreationForm(String teamName, String teamDescription) {
-        typeNameTeam(teamName);
+    public void fillTeamCreationForm(Team team) {
+//        typeNameTeam(teamName);
+//        typeDescriptionTeam(teamDescription);
+        // changed 23.05.19
+        typeNameTeam(getTeamName());
         typeDescriptionTeam(teamDescription);
     }
     
